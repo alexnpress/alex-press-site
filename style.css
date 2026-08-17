@@ -7,11 +7,21 @@
   box-sizing: border-box;
 }
 
+/* ---- FONT ------------------------------------------------------------
+   Arial is the current choice. To try another, comment out the active
+   line below and uncomment one of the alternatives. Nothing else changes.
+   ---------------------------------------------------------------------- */
+
 body {
   margin: 0;
   background: #ffffff;
   color: #000000;
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family: Arial, Helvetica, sans-serif;                        /* ACTIVE */
+  /* font-family: Helvetica, "Helvetica Neue", Arial, sans-serif; */   /* slightly softer */
+  /* font-family: Georgia, "Times New Roman", serif; */                /* serif, more literary */
+  /* font-family: "Times New Roman", Times, serif; */                  /* newspaper serif */
+
   font-size: 16px; /* 16px = 12pt */
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +31,7 @@ body {
 .wrap {
   max-width: 720px;
   margin: 0 auto;
-  padding: 64px 24px 96px;
+  padding: 48px 24px 96px;
 }
 
 /* --- Header ------------------------------------------------------------ */
@@ -40,8 +50,8 @@ body {
 
 nav {
   border-bottom: 1px solid #000000;
-  padding-bottom: 14px;
-  margin-bottom: 56px;
+  padding-bottom: 6px;   /* gap between the tabs and the black line */
+  margin-bottom: 48px;   /* gap between the line and the page content */
 }
 
 nav a {
@@ -74,8 +84,42 @@ h1 {
   margin: 0 0 30px;
 }
 
+/* Section headings on the Work page ("Writing", "Podcasts").
+   Same size as h1 so the two sections read as equals. */
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+
+/* Space above a subhead that follows a previous section */
+h2 + .work-list,
+.work-list + h2 {
+  margin-top: 0;
+}
+
+.work-list + h2 {
+  margin-top: 44px;
+}
+
 p {
   margin: 0 0 22px;
+}
+
+/* --- Work page lists --------------------------------------------------- */
+
+.work-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.work-list li {
+  margin-bottom: 12px;
+}
+
+.work-list li:last-child {
+  margin-bottom: 0;
 }
 
 p:last-child {
